@@ -7,7 +7,28 @@ import arrow1 from "../assets/img/arrow1.svg";
 import arrow2 from "../assets/img/arrow2.svg";
 import colorSharp from "../assets/img/color-sharp.png";
 import logoHtml from "../assets/img/logo-html.png";
+import logoCss from "../assets/img/logoCss.png";
+import logoJs from "../assets/img/logoJs.png";
+import logoVue from "../assets/img/logoVue.png";
+import logoReact from "../assets/img/logoReact.png";
+import logoNode from "../assets/img/logoNode.png";
+import logoFigma from "../assets/img/logoFigma.png";
+import logoPhotoshop from "../assets/img/logoPhotoshop.png";
+import logoPhp from "../assets/img/logoPhp.png";
+import logoLaravel from "../assets/img/logoLaravel.png";
 
+const skills = [
+    { name: "HTML", logo: logoHtml },
+    { name: "CSS", logo: logoCss },
+    { name: "JavaScript", logo: logoJs },
+    { name: "VueJS", logo: logoVue },
+    { name: "ReactJS", logo: logoReact },
+    { name: "NodeJS", logo: logoNode },
+    { name: "Figma", logo: logoFigma },
+    { name: "Photoshop", logo: logoPhotoshop },
+    { name: "PHP", logo: logoPhp },
+    { name: "Laravel", logo: logoLaravel }
+  ];
 export const Skills = () => {
   const responsive = {
     superLargeDesktop: {
@@ -37,90 +58,13 @@ export const Skills = () => {
                     <div className="skill-bx wow zoomIn">
                         <h2>Skills</h2>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br></br> Lorem Ipsum has been the industry's standard dummy text.</p>
-                        {/* <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
-                            <div className="card">
-                              <img className="skill-logo" src={logoHtml} alt="Image"/>
-                              <h4>HTML</h4>
-                          </div>
-                          <div className="card">
-                              <img className="skill-logo" src={logoHtml} alt="Image"/>
-                              <h4>CSS</h4>
-                          </div>
-                          <div className="card">
-                              <img className="skill-logo" src={logoHtml} alt="Image"/>
-                              <h4>JavaScript</h4>
-                          </div>
-                          <div className="card">
-                              <img className="skill-logo" src={logoHtml} alt="Image"/>
-                              <h4>VueJS</h4>
-                          </div>
-                          <div className="card">
-                              <img className="skill-logo" src={logoHtml} alt="Image"/>
-                              <h4>ReatcJS</h4>
-                          </div>
-                          <div className="card">
-                              <img className="skill-logo" src={logoHtml} alt="Image"/>
-                              <h4>NodeJS</h4>
-                          </div>
-                          <div className="card">
-                              <img className="skill-logo" src={logoHtml} alt="Image"/>
-                              <h4>Figma</h4>
-                          </div>
-                          <div className="card">
-                              <img className="skill-logo" src={logoHtml} alt="Image"/>
-                              <h4>PhotoShop</h4>
-                          </div>
-                          <div className="card">
-                              <img className="skill-logo" src={logoHtml} alt="Image"/>
-                              <h4>PHP</h4>
-                          </div>
-                          <div className="card">
-                              <img className="skill-logo" src={logoHtml} alt="Image"/>
-                              <h4>Laravel</h4>
-                          </div>
-                        </Carousel> */}
-
                         <div className="skill-cards" responsive={responsive} infinite={true}>
-                          <div className="card">
-                              <img className="skill-logo" src={logoHtml} alt="Image"/>
-                              <h4>HTML</h4>
-                          </div>
-                          <div className="card">
-                              <img className="skill-logo" src={logoHtml} alt="Image"/>
-                              <h4>CSS</h4>
-                          </div>
-                          <div className="card">
-                              <img className="skill-logo" src={logoHtml} alt="Image"/>
-                              <h4>JavaScript</h4>
-                          </div>
-                          <div className="card">
-                              <img className="skill-logo" src={logoHtml} alt="Image"/>
-                              <h4>VueJS</h4>
-                          </div>
-                          <div className="card">
-                              <img className="skill-logo" src={logoHtml} alt="Image"/>
-                              <h4>ReatcJS</h4>
-                          </div>
-                          <div className="card">
-                              <img className="skill-logo" src={logoHtml} alt="Image"/>
-                              <h4>NodeJS</h4>
-                          </div>
-                          <div className="card">
-                              <img className="skill-logo" src={logoHtml} alt="Image"/>
-                              <h4>Figma</h4>
-                          </div>
-                          <div className="card">
-                              <img className="skill-logo" src={logoHtml} alt="Image"/>
-                              <h4>PhotoShop</h4>
-                          </div>
-                          <div className="card">
-                              <img className="skill-logo" src={logoHtml} alt="Image"/>
-                              <h4>PHP</h4>
-                          </div>
-                          <div className="card">
-                              <img className="skill-logo" src={logoHtml} alt="Image"/>
-                              <h4>Laravel</h4>
-                          </div>
+                        {skills.map((skill, index) => (
+                            <div key={index} className="card">
+                            <img className="skill-logo" src={skill.logo} alt={`${skill.name} logo`} />
+                            <h4>{skill.name}</h4>
+                            </div>
+                        ))}
                         </div>
                     </div>
                 </div>

@@ -368,10 +368,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: inline-block;
 }
 
-.skill .skill-logo {
+.skill-logo {
   width: 100px;
+  height: 100px;
+  object-fit: contain;
 }
-
 /************ Projects Css ************/
 .project {
   padding: 80px 0;
